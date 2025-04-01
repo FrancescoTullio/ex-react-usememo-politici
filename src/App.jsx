@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react"
+import { useState, useEffect, useMemo, memo } from "react"
 
 import AppCard from "./component/AppCard"
 
