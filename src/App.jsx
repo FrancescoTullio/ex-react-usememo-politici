@@ -8,7 +8,7 @@ function App() {
   const [filter, setFilter] = useState("")
   const filteredPoliticians = useMemo(() => {
     if (filter === "") return []
-    const newData = politicians.filter(curElem => curElem.name.includes(filter) || curElem.biography.includes(filter))
+    const newData = politicians.filter(curElem => curElem.name.toLowerCase().includes(filter.toLowerCase()) || curElem.biography.toLowerCase().includes(filter.toLowerCase()))
     return newData
   }, [filter])
 
